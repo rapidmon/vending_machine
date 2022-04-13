@@ -1,399 +1,832 @@
-body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
-    padding: 0;
-    margin: 0;
+@media screen and (min-width:1024px) {
+    
+    /* PC CSS */
+    
+    body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
+        padding: 0;
+        margin: 0;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EAE8FE;
+        background-image: url(./Logo_img.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 386px 180px;
+    }
+    
+    .drink, .money{
+        height: 545px;
+        background-color: white;
+        margin-top: 247px;
+        margin-bottom: 171px;
+    }
+    
+    /* drink */
+    
+    .drink{
+        width: 306px;
+        margin-right: 28px;
+        padding: 0 27px;
+    }
+    
+    .machine{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+    
+    .cola{
+        width: 94px;
+        height: 130px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+        margin: 6px;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    
+    .cola::after{
+        content: "1000원";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        color: white;
+        background-color: #6327FE;
+        border-radius: 50px;
+        width: 60px;
+        height: 12px;
+        text-align: center;
+        padding: 5px;
+        display: block;
+        margin: 7px 0 9px 0;
+    }
+    
+    .Ori{
+        background: url(./mediaquery/Original_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 8px;
+        margin-left: 0;
+        border: 3px solid #6327FE;
+    }
+    
+    .Ori::after{
+        margin-bottom: 6px;
+    }
+    
+    .Vio{
+        position: relative;
+        background: url(./mediaquery/Violet_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+    }
+    
+    .Vio::before{
+        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background-size: 57.51px 44.85px;
+        background-position: 17px 45px;
+        border-radius: 10px;
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .Yel{
+        background: url(./mediaquery/Yellow_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        margin-right: 0;
+    }
+    
+    .Coo{
+        background: url(./mediaquery/Cool_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    
+    .Gre{
+        background: url(./mediaquery/Green_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        border: 3px solid #6327FE;
+        margin-bottom: 0;
+    }
+    
+    .Gre::after{
+        margin-bottom: 6px;
+    }
+    
+    .Ora{
+        background: url(./mediaquery/Orange_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .changes_area{
+        border: 0;
+        background-color: #EAE8FE;
+        border-radius: 5px;
+        width: 180px;
+        margin: 20px 0 11px 0;
+        padding: 6px 10px 7px 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .change{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .change_input{
+        border: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px; 
+        text-align: end;
+        background-color: #EAE8FE;
+        width: 130px;
+        float: right;
+    }
+    
+    .money_back{
+        width: 94px;
+        height: 33px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 19px;
+        background-color: white;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 20px 0 0 12px;
+    }
+    
+    .enter{
+        width: 200px;
+        height: 33px;
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 19px;
+        color: #BDBDBD;
+        padding-left: 6px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .enter_money{
+        margin-top: 0;
+        height: 32px;
+    }
+    
+    .sell{
+        width: 132px;
+        margin: 6px;
+    }
+    
+    .sell_area{
+        width: 200px;
+        height: 106px;
+        overflow: auto;
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: #EAE8FE;
+        display: inline-block;
+        margin-top: 11px;
+    }
+    
+    .sell_area::-webkit-scrollbar{
+        width: 12px;
+    }
+    
+    .sell_area::-webkit-scrollbar-thumb{
+        box-shadow: inset 0 0 12px 12px white;
+        border: solid 4px transparent;
+        border-radius: 50px;
+        height: 87px;
+    }
+    
+    .sell_area::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 12px 12px transparent;
+        border: solid 4px transparent;
+    }
+    
+    .obtain{
+        background-color: #6327FE;
+        width: 94px;
+        height: 106px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 19px;
+        border: 0;
+        color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        vertical-align: top;
+        margin: 12px 0 0 12px;
+    }
+    
+    /* money */
+    
+    .money{
+        width: 360px;
+    }
+    
+    .money_header{
+        border-bottom: 20px solid #EAE8FE;
+        width: 360px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .have_money_area{
+        width: 286px;
+        height: 20px;
+        background-color: #EAE8FE;
+        border-radius: 5px;
+        border: 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 10px;
+    }
+    
+    .have_money_label{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .have_money{
+        text-align: end;
+        border: 0;
+        font-weight: 700;
+        font-size: 14px;
+        background-color: #EAE8FE;
+    }
+    
+    .gain_heading{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 25px 0 0 146px;
+    }
+    
+    .gain_area{
+        width: 306px;
+        height: 364px;
+        box-sizing: border-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        list-style: none;
+        background-color: #EAE8FE;
+        margin: 13px 0 0 27px;
+        overflow: auto;
+    }
+    
+    .gain_area::-webkit-scrollbar{
+        width: 12px;
+    }
+    
+    .gain_area::-webkit-scrollbar-thumb{
+        box-shadow: inset 0 0 12px 12px white;
+        border: solid 4px transparent;
+        border-radius: 50px;
+        height: 87px;
+    }
+    
+    .gain_area::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 12px 12px transparent;
+        border: solid 4px transparent;
+    }
+    
+    .gain{
+        height: 46px;
+        border-radius: 5px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 13px;
+        color: #333333;
+        display: flex;
+        align-items: center;
+        padding-left: 38px;
+        justify-content: space-between;
+    }
+    
+    .sum{
+        margin: 12px;
+        width: 238px;
+    }
+    
+    .gain::after{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .original{
+        background-image: url(./mediaquery/Original_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .original::after{
+        content: "1";
+    }
+    
+    .green{
+        background-image: url(./mediaquery/Green_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .green:after{
+        content: "2"
+    }
+    
+    .orange{
+        background-image: url(./mediaquery/Orange_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .orange::after{
+        content: "1";
+    }
+    
+    .violet{
+        background-image: url(./mediaquery/Violet_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .violet::after{
+        content: "5";
+    }
+    
+    .money::after{
+        display: block;
+        content: "총금액 : 9,000원";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 17px;
+        width: 333px;
+        text-align: end;
+        margin-top: 6px;
+    }
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EAE8FE;
-    background-image: url(./Logo_img.png);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 386px 180px;
-}
+@media screen and (max-width:767px){
 
-.drink, .money{
-    height: 545px;
-    background-color: white;
-    margin-top: 247px;
-    margin-bottom: 171px;
-}
+	/* 모바일 CSS */
 
-/* drink */
-
-.drink{
-    width: 306px;
-    margin-right: 28px;
-    padding: 0 27px;
-}
-
-.machine{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-
-.cola{
-    width: 94px;
-    height: 130px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    margin: 6px;
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 13px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
-
-.cola::after{
-    content: "1000원";
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 100%;
-    color: white;
-    background-color: #6327FE;
-    border-radius: 50px;
-    width: 60px;
-    height: 12px;
-    text-align: center;
-    padding: 5px;
-    display: block;
-    margin: 7px 0 9px 0;
-}
-
-.Ori{
-    background: url(./mediaquery/Original_Cola.png) no-repeat;
-    background-size: 35px 65px;
-    background-position: center 11px;
-    margin-left: 0;
-}
-
-.Vio{
-    position: relative;
-    background: url(./mediaquery/Violet_Cola.png);
-    background-repeat: no-repeat;
-    background-size: 35px 65px;
-    background-position: center 11px;
-}
-
-.Vio::before{
-    background: url(./mediaquery/Sold-out.png) no-repeat;
-    background-size: 57.51px 44.85px;
-    background-position: 17px 45px;
-    border-radius: 10px;
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.Yel{
-    background: url(./mediaquery/Yellow_Cola.png) no-repeat;
-    background-size: 35px 65px;
-    background-position: center 11px;
-    margin-right: 0;
-}
-
-.Coo{
-    background: url(./mediaquery/Cool_Cola.png) no-repeat;
-    background-size: 35px 65px;
-    background-position: center 11px;
-    margin-left: 0;
-}
-
-.Gre{
-    background: url(./mediaquery/Green_Cola.png) no-repeat;
-    background-size: 35px 65px;
-    background-position: center 11px;
-}
-
-.Ora{
-    background: url(./mediaquery/Orange_Cola.png) no-repeat;
-    background-size: 35px 65px;
-    background-position: center 11px;
-    margin-right: 0;
-}
-
-.changes_area{
-    border: 0;
-    background-color: #EAE8FE;
-    border-radius: 5px;
-    width: 180px;
-    margin: 20px 0 11px 0;
-    padding: 6px 10px 7px 10px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.change{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.change_input{
-    border: 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px; 
-    text-align: end;
-    background-color: #EAE8FE;
-    width: 130px;
-    float: right;
-}
-
-.money_back{
-    width: 94px;
-    height: 33px;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 19px;
-    background-color: white;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 20px 0 0 12px;
-}
-
-.enter{
-    width: 200px;
-    height: 33px;
-    border: 1px solid #BDBDBD;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 19px;
-    color: #BDBDBD;
-    padding-left: 6px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.enter_money{
-    margin-top: 0;
-}
-
-.sell{
-    width: 132px;
-    margin: 6px;
-}
-
-.sell_area{
-    width: 200px;
-    height: 106px;
-    overflow: auto;
-    border: 1px solid #BDBDBD;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #EAE8FE;
-    display: inline-block;
-    margin-top: 11px;
-}
-
-.sell_area::-webkit-scrollbar{
-    width: 12px;
-}
-
-.sell_area::-webkit-scrollbar-thumb{
-    box-shadow: inset 0 0 12px 12px white;
-    border: solid 4px transparent;
-    border-radius: 50px;
-    height: 87px;
-}
-
-.sell_area::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 12px 12px transparent;
-    border: solid 4px transparent;
-}
-
-.obtain{
-    background-color: #6327FE;
-    width: 94px;
-    height: 106px;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 19px;
-    border: 0;
-    color: white;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    vertical-align: top;
-    margin: 12px 0 0 12px;
-}
-
-/* money */
-
-.money{
-    width: 360px;
-}
-
-.money_header{
-    border-bottom: 20px solid #EAE8FE;
-    width: 360px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.have_money_area{
-    width: 286px;
-    height: 20px;
-    background-color: #EAE8FE;
-    border-radius: 5px;
-    border: 0;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 10px;
-}
-
-.have_money_label{
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.have_money{
-    text-align: end;
-    border: 0;
-    font-weight: 700;
-    font-size: 14px;
-    background-color: #EAE8FE;
-}
-
-.gain_heading{
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    margin: 25px 0 0 146px;
-}
-
-.gain_area{
-    width: 306px;
-    height: 364px;
-    box-sizing: border-box;
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-    list-style: none;
-    background-color: #EAE8FE;
-    margin: 13px 0 0 27px;
-    overflow: auto;
-}
-
-.gain_area::-webkit-scrollbar{
-    width: 12px;
-}
-
-.gain_area::-webkit-scrollbar-thumb{
-    box-shadow: inset 0 0 12px 12px white;
-    border: solid 4px transparent;
-    border-radius: 50px;
-    height: 87px;
-}
-
-.gain_area::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 12px 12px transparent;
-    border: solid 4px transparent;
-}
-
-.gain{
-    height: 46px;
-    border-radius: 5px;
-    background-color: white;
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 13px;
-    color: #333333;
-    display: flex;
-    align-items: center;
-    padding-left: 38px;
-    justify-content: space-between;
-}
-
-.sum{
-    margin: 12px;
-    width: 238px;
-}
-
-.gain::after{
-    width: 30px;
-    height: 30px;
-    border: 1px solid #BDBDBD;
-    box-sizing: border-box;
-    border-radius: 5px;
-    margin-right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.original{
-    background-image: url(./mediaquery/Original_Cola.png);
-    background-repeat: no-repeat;
-    background-size: 18px 33px;
-    background-position: 10px 6px;
-}
-
-.original::after{
-    content: "1";
-}
-
-.green{
-    background-image: url(./mediaquery/Green_Cola.png);
-    background-repeat: no-repeat;
-    background-size: 18px 33px;
-    background-position: 10px 6px;
-}
-
-.green:after{
-    content: "2"
-}
-
-.orange{
-    background-image: url(./mediaquery/Orange_Cola.png);
-    background-repeat: no-repeat;
-    background-size: 18px 33px;
-    background-position: 10px 6px;
-}
-
-.orange::after{
-    content: "1";
-}
-
-.violet{
-    background-image: url(./mediaquery/Violet_Cola.png);
-    background-repeat: no-repeat;
-    background-size: 18px 33px;
-    background-position: 10px 6px;
-}
-
-.violet::after{
-    content: "5";
-}
-
-.money::after{
-    display: inline-block;
-    content: "총금액 : 9,000원";
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 17px;
-    width: 109px;
-    left: 224px;
-    text-align: end;
-    margin-top: 6px;
-    position: relative;
+    body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
+        padding: 0;
+        margin: 0;
+    }
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./Logo_img.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 166px 78px;
+    }
+    
+    .drink, .money{
+        height: 492px;
+        background-color: white;
+    }
+    
+    /* drink */
+    
+    .drink{
+        width: 306px;
+        padding: 0 27px;
+        margin-top: 90px;
+    }
+    
+    .machine{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .cola{
+        width: 94px;
+        height: 130px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+        margin: 6px;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    
+    .cola::after{
+        content: "1000원";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        color: white;
+        background-color: #6327FE;
+        border-radius: 50px;
+        width: 60px;
+        height: 12px;
+        text-align: center;
+        padding: 5px;
+        display: block;
+        margin: 7px 0 9px 0;
+    }
+    
+    .Ori{
+        background: url(./mediaquery/Original_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 8px;
+        margin-left: 0;
+        border: 3px solid #6327FE;
+    }
+    
+    .Ori::after{
+        margin-bottom: 6px;
+    }
+    
+    .Vio{
+        position: relative;
+        background: url(./mediaquery/Violet_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+    }
+    
+    .Vio::before{
+        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background-size: 57.51px 44.85px;
+        background-position: 17px 45px;
+        border-radius: 10px;
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .Yel{
+        background: url(./mediaquery/Yellow_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        margin-right: 0;
+    }
+    
+    .Coo{
+        background: url(./mediaquery/Cool_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    
+    .Gre{
+        background: url(./mediaquery/Green_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        border: 3px solid #6327FE;
+        margin-bottom: 0;
+    }
+    
+    .Gre::after{
+        margin-bottom: 6px;
+    }
+    
+    .Ora{
+        background: url(./mediaquery/Orange_Cola.png) no-repeat;
+        background-size: 35px 65px;
+        background-position: center 11px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .changes_area{
+        border: 0;
+        background-color: #EAE8FE;
+        border-radius: 5px;
+        width: 180px;
+        margin: 20px 0 11px 0;
+        padding: 6px 10px 7px 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .change{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .change_input{
+        border: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px; 
+        text-align: end;
+        background-color: #EAE8FE;
+        width: 130px;
+        float: right;
+    }
+    
+    .money_back{
+        width: 94px;
+        height: 33px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 19px;
+        background-color: white;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 20px 0 0 12px;
+    }
+    
+    .enter{
+        width: 200px;
+        height: 33px;
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 19px;
+        color: #BDBDBD;
+        padding-left: 6px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .enter_money{
+        margin-top: 0;
+        height: 32px;
+    }
+    
+    .sell{
+        width: 132px;
+        margin: 6px;
+    }
+    
+    .sell_area{
+        width: 200px;
+        height: 106px;
+        overflow: auto;
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: #EAE8FE;
+        display: inline-block;
+        margin-top: 11px;
+    }
+    
+    .sell_area::-webkit-scrollbar{
+        width: 12px;
+    }
+    
+    .sell_area::-webkit-scrollbar-thumb{
+        box-shadow: inset 0 0 12px 12px white;
+        border: solid 4px transparent;
+        border-radius: 50px;
+        height: 87px;
+    }
+    
+    .sell_area::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 12px 12px transparent;
+        border: solid 4px transparent;
+    }
+    
+    .obtain{
+        background-color: #6327FE;
+        width: 94px;
+        height: 106px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 19px;
+        border: 0;
+        color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        vertical-align: top;
+        margin: 12px 0 0 12px;
+    }
+    
+    /* money */
+    
+    .money{
+        width: 360px;
+    }
+    
+    .money_header{
+        width: 360px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .have_money_area{
+        width: 286px;
+        height: 20px;
+        background-color: #EAE8FE;
+        border-radius: 5px;
+        border: 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 10px;
+    }
+    
+    .have_money_label{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .have_money{
+        text-align: end;
+        border: 0;
+        font-weight: 700;
+        font-size: 14px;
+        background-color: #EAE8FE;
+    }
+    
+    .gain_heading{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 31px 0 0 146px;
+    }
+    
+    .gain_area{
+        width: 306px;
+        height: 364px;
+        box-sizing: border-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        list-style: none;
+        background-color: #EAE8FE;
+        margin: 13px 0 0 27px;
+        overflow: auto;
+    }
+    
+    .gain_area::-webkit-scrollbar{
+        width: 12px;
+    }
+    
+    .gain_area::-webkit-scrollbar-thumb{
+        box-shadow: inset 0 0 12px 12px white;
+        border: solid 4px transparent;
+        border-radius: 50px;
+        height: 87px;
+    }
+    
+    .gain_area::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 12px 12px transparent;
+        border: solid 4px transparent;
+    }
+    
+    .gain{
+        height: 46px;
+        border-radius: 5px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 13px;
+        color: #333333;
+        display: flex;
+        align-items: center;
+        padding-left: 38px;
+        justify-content: space-between;
+    }
+    
+    .sum{
+        margin: 12px;
+        width: 238px;
+    }
+    
+    .gain::after{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .original{
+        background-image: url(./mediaquery/Original_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .original::after{
+        content: "1";
+    }
+    
+    .green{
+        background-image: url(./mediaquery/Green_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .green:after{
+        content: "2"
+    }
+    
+    .orange{
+        background-image: url(./mediaquery/Orange_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .orange::after{
+        content: "1";
+    }
+    
+    .violet{
+        background-image: url(./mediaquery/Violet_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+    
+    .violet::after{
+        content: "5";
+    }
+    
+    .money::after{
+        display: block;
+        content: "총금액 : 9,000원";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 17px;
+        width: 333px;
+        text-align: end;
+        margin-top: 6px;
+        padding-bottom: 34.5px;
+    }
 }
