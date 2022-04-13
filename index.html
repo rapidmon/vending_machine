@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>vending machine</title>
+</head>
+<body>
+    <section class="drink">
+        <ul class="machine">
+            <li class="cola Ori">Original_Cola</li>
+            <li class="cola Vio">Violet_Cola</li>
+            <li class="cola Yel">Yellow_Cola</li>
+            <li class="cola Coo">Cool_Cola</li>
+            <li class="cola Gre">Green_Cola</li>
+            <li class="cola Ora">Orange_Cola</li>
+        </ul>
+        <fieldset class="changes_area">
+            <label for="changes" class="change">잔액:</label>
+            <input class="change_input" type="text" id="changes" placeholder="1,000원">
+        </fieldset><button type="button" class="money_back">거스름돈 반환</button>
+        <input class="enter" type="text" placeholder="입금액 입력"><button type="button" class="money_back enter_money">입금</button>
+        <ul class="sell_area">
+            <li class="gain original sell">Original_Cola</li>
+            <li class="gain green sell">Green_Cola</li>
+            <li class="gain violet sell">Violet_Cola</li>
+        </ul><button type="button" class="obtain">획득</button>
+    </section>
+    <section class="money">
+        <header class="money_header">
+            <fieldset class="have_money_area">
+                <label class="have_money_label" for="have_money">소지금:</label>
+                <input class="have_money" id="have_money" type="text" value="25,000원">
+            </fieldset>
+        </header>
+        <h1 class="gain_heading">획득한 음료</h1>
+        <ul class="gain_area">
+            <li class="gain sum original">Original_Cola</li>
+            <li class="gain sum green">Green_Cola</li>
+            <li class="gain sum orange">Orange_Cola</li>
+            <li class="gain sum violet">Violet_Cola</li>
+        </ul>
+    </section>
+</body>
+</html>
