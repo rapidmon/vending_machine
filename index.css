@@ -1,4 +1,4 @@
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
     
     /* PC CSS */
     
@@ -54,7 +54,13 @@
         justify-content: end;
         align-items: center;
         box-sizing: border-box;
+        cursor: pointer;
     }
+    
+    .cola:hover{
+        outline: 3px solid #6327FE;
+    }
+
     
     .cola::after{
         content: "1000원";
@@ -77,13 +83,8 @@
         background-size: 35px 65px;
         background-position: center 8px;
         margin-left: 0;
-        border: 3px solid #6327FE;
     }
-    
-    .Ori::after{
-        margin-bottom: 6px;
-    }
-    
+      
     .Vio{
         position: relative;
         background: url(./mediaquery/Violet_Cola.png);
@@ -104,6 +105,7 @@
         bottom: 0px;
         left: 0px;
         background-color: rgba(0, 0, 0, 0.8);
+        display: none;
     }
     
     .Yel{
@@ -125,12 +127,7 @@
         background: url(./mediaquery/Green_Cola.png) no-repeat;
         background-size: 35px 65px;
         background-position: center 11px;
-        border: 3px solid #6327FE;
         margin-bottom: 0;
-    }
-    
-    .Gre::after{
-        margin-bottom: 6px;
     }
     
     .Ora{
@@ -168,6 +165,10 @@
         width: 130px;
         float: right;
     }
+
+    .change_input:focus{
+        outline: 0;
+    }
     
     .money_back{
         width: 94px;
@@ -197,6 +198,10 @@
         vertical-align: top;
     }
     
+    .enter:focus{
+        outline: 0;
+    }
+
     .enter_money{
         margin-top: 0;
         height: 32px;
@@ -290,6 +295,10 @@
         font-size: 14px;
         background-color: #EAE8FE;
     }
+
+    .have_money:focus{
+        outline: 0;
+    }
     
     .gain_heading{
         font-size: 14px;
@@ -368,7 +377,7 @@
     }
     
     .original::after{
-        content: "1";
+        content: attr(data-count);
     }
     
     .green{
@@ -379,7 +388,7 @@
     }
     
     .green:after{
-        content: "2"
+        content: attr(data-count);
     }
     
     .orange{
@@ -390,7 +399,7 @@
     }
     
     .orange::after{
-        content: "1";
+        content: attr(data-count);
     }
     
     .violet{
@@ -401,12 +410,34 @@
     }
     
     .violet::after{
-        content: "5";
+        content: attr(data-count);
+    }
+
+    .cool{
+        background-image: url(./mediaquery/Cool_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+
+    .cool::after{
+        content: attr(data-count);
+    }
+
+    .yellow{
+        background-image: url(./mediaquery/Yellow_Cola.png);
+        background-repeat: no-repeat;
+        background-size: 18px 33px;
+        background-position: 10px 6px;
+    }
+
+    .yellow::after{
+        content: attr(data-count);
     }
     
     .money::after{
         display: block;
-        content: "총금액 : 9,000원";
+        content: attr(data-total);
         font-weight: 500;
         font-size: 12px;
         line-height: 17px;
@@ -428,9 +459,8 @@
     body{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        background-image: url(./Logo_img.png);
+        background-image: url(./mediaquery/logo.svg);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 166px 78px;
@@ -488,7 +518,7 @@
     }
     
     .Ori{
-        background: url(./mediaquery/Original_Cola.png) no-repeat;
+        background: url(./mediaquery/Original_Cola.svg) no-repeat;
         background-size: 35px 65px;
         background-position: center 8px;
         margin-left: 0;
@@ -501,14 +531,14 @@
     
     .Vio{
         position: relative;
-        background: url(./mediaquery/Violet_Cola.png);
+        background: url(./mediaquery/Violet_Cola.svg);
         background-repeat: no-repeat;
         background-size: 35px 65px;
         background-position: center 11px;
     }
     
     .Vio::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background: url(./mediaquery/Sold-out.svg) no-repeat;
         background-size: 57.51px 44.85px;
         background-position: 17px 45px;
         border-radius: 10px;
@@ -522,14 +552,14 @@
     }
     
     .Yel{
-        background: url(./mediaquery/Yellow_Cola.png) no-repeat;
+        background: url(./mediaquery/Yellow_Cola.svg) no-repeat;
         background-size: 35px 65px;
         background-position: center 11px;
         margin-right: 0;
     }
     
     .Coo{
-        background: url(./mediaquery/Cool_Cola.png) no-repeat;
+        background: url(./mediaquery/Cool_Cola.svg) no-repeat;
         background-size: 35px 65px;
         background-position: center 11px;
         margin-left: 0;
@@ -537,7 +567,7 @@
     }
     
     .Gre{
-        background: url(./mediaquery/Green_Cola.png) no-repeat;
+        background: url(./mediaquery/Green_Cola.svg) no-repeat;
         background-size: 35px 65px;
         background-position: center 11px;
         border: 3px solid #6327FE;
@@ -549,7 +579,7 @@
     }
     
     .Ora{
-        background: url(./mediaquery/Orange_Cola.png) no-repeat;
+        background: url(./mediaquery/Orange_Cola.svg) no-repeat;
         background-size: 35px 65px;
         background-position: center 11px;
         margin-right: 0;
@@ -775,7 +805,7 @@
     }
     
     .original{
-        background-image: url(./mediaquery/Original_Cola.png);
+        background-image: url(./mediaquery/Original_Cola.svg);
         background-repeat: no-repeat;
         background-size: 18px 33px;
         background-position: 10px 6px;
@@ -786,7 +816,7 @@
     }
     
     .green{
-        background-image: url(./mediaquery/Green_Cola.png);
+        background-image: url(./mediaquery/Green_Cola.svg);
         background-repeat: no-repeat;
         background-size: 18px 33px;
         background-position: 10px 6px;
@@ -797,7 +827,7 @@
     }
     
     .orange{
-        background-image: url(./mediaquery/Orange_Cola.png);
+        background-image: url(./mediaquery/Orange_Cola.svg);
         background-repeat: no-repeat;
         background-size: 18px 33px;
         background-position: 10px 6px;
@@ -808,7 +838,7 @@
     }
     
     .violet{
-        background-image: url(./mediaquery/Violet_Cola.png);
+        background-image: url(./mediaquery/Violet_Cola.svg);
         background-repeat: no-repeat;
         background-size: 18px 33px;
         background-position: 10px 6px;
