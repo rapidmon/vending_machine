@@ -51,7 +51,7 @@ $deposit_button.addEventListener("click", function(){
     else{
         //문자 숫자화
         $current.value = $current.value.replace("원","").replace(",","")
-        $changes.value = $changes.value.replace("원","")
+        $changes.value = $changes.value.replace("원","").replace(",","")
         $deposit.value = $deposit.value.replace("원","").replace(",","")
         
         //잔액 계산 실행
@@ -79,34 +79,32 @@ $machine.addEventListener("click", function(e){
     const $changes = document.getElementById("changes");
     const $sell_area = document.getElementById("sell_area")
     const {name, price, url} = e.target.dataset;
-
     if(change_money == 0){
         //잔액이 0일 경우 클릭 이벤트 일어나지 않음
         alert("잔액 부족!")
-        // if(cola[name].count == 0){
-        //     document.querySelector(".Vio:before")
-        // }
-        const $hey = document.querySelector(".Vio")
-        console.dir($hey)
         return;
     }
     else{
         if(cola[name].count == 0){
             //수량 확인
             alert("수량 부족!")
-        }
-        
-        else{
-            //HTML요소 삽입
-            if(cola[name].sellcount == 1){
-                //name을 가진 cola의 첫 번째 클릭 시
-                $sell_area.insertAdjacentHTML('afterbegin', `<li class="gain ${url} sell" data-name=${name} data-url=${url} data-price=${price} data-count=${cola[name].sellcount}>${name}</li>`)
             }
+            
             else{
-                //두 번 이상 눌린 cola의 경우
-                for(let i = 0; i<($sell_area.childNodes.length-3); i++){
+                //HTML요소 삽입
+                if(cola[name].sellcount == 1){
+                    //name을 가진 cola의 첫 번째 클릭 시
+                    $sell_area.insertAdjacentHTML('afterbegin', `<li class="gain ${url} sell" data-name=${name} data-url=${url} data-price=${price} data-count=${cola[name].sellcount}>${name}</li>`)
+                }
+                else{
+                    //두 번 이상 눌린 cola의 경우
+                    console.log("ChildNodes Length: ",$sell_area.childNodes.length)
+                    for(let i = 0; i<($sell_area.childNodes.length); i++){
+                    console.log("TextContent :" , $sell_area.childNodes[i].textContent, name)
                     if($sell_area.childNodes[i].textContent === name){
+                        console.log("Befre: ", document.getElementsByClassName('sell')[0].dataset.count)
                         document.getElementsByClassName('sell')[0].dataset.count = parseInt(document.getElementsByClassName('sell')[0].dataset.count) + 1;
+                        console.log("AFter: ", document.getElementsByClassName('sell')[0].dataset.count)
                     }
                 }
             }
@@ -119,9 +117,6 @@ $machine.addEventListener("click", function(e){
             const change_kr_2 = change_value_2.toLocaleString('ko-KR');
             $changes.value = change_kr_2 + "원";
         }
-        // if(cola[name].count == 0){
-        //     document.querySelector(".Vio:before").style.display = "";
-        // }       
     }
 })
 
@@ -157,7 +152,7 @@ $obtain_button.addEventListener("click", function(){
     const $sell_area = document.getElementById("sell_area")
     
     //획득 구간으로 넘기기
-    for(let j = 0; j<$sell_area.childNodes.length-3; j++){
+    for(let j = 0; j<$sell_area.childNodes.length; j++){
         const {name, url, price, count} = $sell_area.childNodes[j].dataset
         $gain_area.insertAdjacentHTML('afterbegin', `<li class="gain ${url} sum" data-count=${count}>${name}</li>`)
         total_money += Number(price) * Number(count)
