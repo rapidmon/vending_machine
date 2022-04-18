@@ -89,22 +89,17 @@ $machine.addEventListener("click", function(e){
             //수량 확인
             alert("수량 부족!")
             }
-            
+        else{
+            //HTML요소 삽입
+            if(cola[name].sellcount == 1){
+            //name을 가진 cola의 첫 번째 클릭 시
+                $sell_area.insertAdjacentHTML('afterbegin', `<li class="gain ${url} sell" data-name=${name} data-url=${url} data-price=${price} data-count=${cola[name].sellcount}>${name}</li>`)
+            }
             else{
-                //HTML요소 삽입
-                if(cola[name].sellcount == 1){
-                    //name을 가진 cola의 첫 번째 클릭 시
-                    $sell_area.insertAdjacentHTML('afterbegin', `<li class="gain ${url} sell" data-name=${name} data-url=${url} data-price=${price} data-count=${cola[name].sellcount}>${name}</li>`)
-                }
-                else{
-                    //두 번 이상 눌린 cola의 경우
-                    console.log("ChildNodes Length: ",$sell_area.childNodes.length)
-                    for(let i = 0; i<($sell_area.childNodes.length); i++){
-                    console.log("TextContent :" , $sell_area.childNodes[i].textContent, name)
+                //두 번 이상 눌린 cola의 경우
+                for(let i = 0; i<($sell_area.childNodes.length); i++){
                     if($sell_area.childNodes[i].textContent === name){
-                        console.log("Befre: ", document.getElementsByClassName('sell')[0].dataset.count)
                         document.getElementsByClassName('sell')[0].dataset.count = parseInt(document.getElementsByClassName('sell')[0].dataset.count) + 1;
-                        console.log("AFter: ", document.getElementsByClassName('sell')[0].dataset.count)
                     }
                 }
             }
@@ -116,6 +111,11 @@ $machine.addEventListener("click", function(e){
             let change_value_2 = Number($changes.value)
             const change_kr_2 = change_value_2.toLocaleString('ko-KR');
             $changes.value = change_kr_2 + "원";
+        }
+        if(cola[name].count == 0){
+            //품절 표시
+            let styleEm = document.head.appendChild(document.createElement("style"))
+            styleEm.innerHTML = `.${e.target.classList[1]}:before {content : ''}`
         }
     }
 })
@@ -153,8 +153,18 @@ $obtain_button.addEventListener("click", function(){
     
     //획득 구간으로 넘기기
     for(let j = 0; j<$sell_area.childNodes.length; j++){
-        const {name, url, price, count} = $sell_area.childNodes[j].dataset
+        const {name, url, price, count} = $sell_area.childNodes[j].dataset       
         $gain_area.insertAdjacentHTML('afterbegin', `<li class="gain ${url} sum" data-count=${count}>${name}</li>`)
+
+        //이미 있는 목록일 경우 갯수만 증가
+        for(let i = 1; i<$gain_area.childNodes.length; i++){
+            if($gain_area.childNodes[i].textContent === name){
+                $gain_area.childNodes[i].dataset.count = parseInt(count) + parseInt($gain_area.childNodes[i].dataset.count)
+                $gain_area.removeChild($gain_area.firstChild);
+            }
+        }
+
+        //총금액 계산, 콜라 팔린 갯수 초기화
         total_money += Number(price) * Number(count)
         cola[name].sellcount = 1;
     }
@@ -166,7 +176,9 @@ $obtain_button.addEventListener("click", function(){
 
     //총금액 산출
     const $total_money = document.getElementById("after_section")
-    $total_money.dataset.total = `총금액: ${total_money}원`
+    let total_value = Number(total_money)
+    const total = total_value.toLocaleString('ko-KR');
+    $total_money.dataset.total = `총금액: ${total}원`
 })
 
 
