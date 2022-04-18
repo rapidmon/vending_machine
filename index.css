@@ -596,6 +596,21 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         background-size: 35px 65px;
         background-position: center 8px;
         margin-left: 0;
+        position: relative;
+    }
+
+    .Ori::before{
+        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background-size: 57.51px 44.85px;
+        background-position: 17px 45px;
+        border-radius: 10px;
+        content: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
     }
       
     .Vio{
@@ -625,6 +640,21 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         background-size: 35px 65px;
         background-position: center 11px;
         margin-right: 0;
+        position: relative;
+    }
+
+    .Yel::before{
+        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background-size: 57.51px 44.85px;
+        background-position: 17px 45px;
+        border-radius: 10px;
+        content: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
     }
     
     .Coo{
@@ -633,6 +663,21 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         background-position: center 11px;
         margin-left: 0;
         margin-bottom: 0;
+        position: relative;
+    }
+
+    .Coo::before{
+        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background-size: 57.51px 44.85px;
+        background-position: 17px 45px;
+        border-radius: 10px;
+        content: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
     }
     
     .Gre{
@@ -640,6 +685,21 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         background-size: 35px 65px;
         background-position: center 11px;
         margin-bottom: 0;
+        position: relative;
+    }
+
+    .Gre::before{
+        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background-size: 57.51px 44.85px;
+        background-position: 17px 45px;
+        border-radius: 10px;
+        content: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
     }
     
     .Ora{
@@ -648,6 +708,21 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         background-position: center 11px;
         margin-right: 0;
         margin-bottom: 0;
+        position: relative;
+    }
+
+    .Ora::before{
+        background: url(./mediaquery/Sold-out.png) no-repeat;
+        background-size: 57.51px 44.85px;
+        background-position: 17px 45px;
+        border-radius: 10px;
+        content: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
     }
     
     .changes_area{
