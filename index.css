@@ -3,6 +3,195 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     margin: 0;
 }
 
+.hidden{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.cola{
+    width: 94px;
+    padding-top: 79px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    margin: 6px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cola:hover{
+    outline: 3px solid #6327FE;
+}
+
+.cola::after{
+    content: "1000원";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: white;
+    background-color: #6327FE;
+    border-radius: 50px;
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    margin: 7px 0 9px 0;
+}
+
+.cola::before{
+    background: url(./mediaquery/Sold-out.png) no-repeat;
+    background-size: 57.51px 44.85px;
+    background-position: 17px 45px;
+    border-radius: 10px;
+    content: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+}  
+
+.Ori{
+    background: url(./mediaquery/Original_Cola.png) no-repeat;
+    background-size: 35px 65px;
+    background-position: center 8px;
+    margin-left: 0;
+    position: relative;
+}
+  
+.Vio{
+    position: relative;
+    background: url(./mediaquery/Violet_Cola.png);
+    background-repeat: no-repeat;
+    background-size: 35px 65px;
+    background-position: center 11px;
+}
+
+.Vio::before{
+    content: "";
+}
+    
+.Yel{
+    background: url(./mediaquery/Yellow_Cola.png) no-repeat;
+    background-size: 35px 65px;
+    background-position: center 11px;
+    margin-right: 0;
+    position: relative;
+}
+
+.Coo{
+    background: url(./mediaquery/Cool_Cola.png) no-repeat;
+    background-size: 35px 65px;
+    background-position: center 11px;
+    margin-left: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.Gre{
+    background: url(./mediaquery/Green_Cola.png) no-repeat;
+    background-size: 35px 65px;
+    background-position: center 11px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.Ora{
+    background: url(./mediaquery/Orange_Cola.png) no-repeat;
+    background-size: 35px 65px;
+    background-position: center 11px;
+    margin-right: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.gain{
+    border-radius: 5px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px 38px;
+    justify-content: space-between;
+}
+
+.sum{
+    margin: 12px;
+    width: 238px;
+}
+
+.gain::after{
+    width: 30px;
+    padding: 4px 0;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    content: attr(data-count);
+}
+
+.original{
+    background-image: url(./mediaquery/Original_Cola.png);
+    background-repeat: no-repeat;
+    background-size: 18px 33px;
+    background-position: 10px 6px;
+}
+
+.green{
+    background-image: url(./mediaquery/Green_Cola.png);
+    background-repeat: no-repeat;
+    background-size: 18px 33px;
+    background-position: 10px 6px;
+}
+
+.orange{
+    background-image: url(./mediaquery/Orange_Cola.png);
+    background-repeat: no-repeat;
+    background-size: 18px 33px;
+    background-position: 10px 6px;
+}
+
+.violet{
+    background-image: url(./mediaquery/Violet_Cola.png);
+    background-repeat: no-repeat;
+    background-size: 18px 33px;
+    background-position: 10px 6px;
+}
+
+.cool{
+    background-image: url(./mediaquery/Cool_Cola.png);
+    background-repeat: no-repeat;
+    background-size: 18px 33px;
+    background-position: 10px 6px;
+}
+
+.yellow{
+    background-image: url(./mediaquery/Yellow_Cola.png);
+    background-repeat: no-repeat;
+    background-size: 18px 33px;
+    background-position: 10px 6px;
+}
+
 @media screen and (min-width:768px) {
     
     /* PC CSS */  
@@ -39,176 +228,6 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         margin-top: 25px;
     }
     
-    .cola{
-        width: 94px;
-        height: 130px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-        margin: 6px;
-        font-weight: 500;
-        font-size: 9px;
-        line-height: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: center;
-        box-sizing: border-box;
-        cursor: pointer;
-    }
-    
-    .cola:hover{
-        outline: 3px solid #6327FE;
-    }
- 
-    .cola::after{
-        content: "1000원";
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 100%;
-        color: white;
-        background-color: #6327FE;
-        border-radius: 50px;
-        width: 60px;
-        height: 12px;
-        text-align: center;
-        padding: 5px;
-        display: block;
-        margin: 7px 0 9px 0;
-    }
-    
-    .Ori{
-        background: url(./mediaquery/Original_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 8px;
-        margin-left: 0;
-        position: relative;
-    }
-
-    .Ori::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-      
-    .Vio{
-        position: relative;
-        background: url(./mediaquery/Violet_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-    }
-    
-    .Vio::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Yel{
-        background: url(./mediaquery/Yellow_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-right: 0;
-        position: relative;
-    }
-
-    .Yel::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Coo{
-        background: url(./mediaquery/Cool_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-left: 0;
-        margin-bottom: 0;
-        position: relative;
-    }
-
-    .Coo::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Gre{
-        background: url(./mediaquery/Green_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-bottom: 0;
-        position: relative;
-    }
-
-    .Gre::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Ora{
-        background: url(./mediaquery/Orange_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-right: 0;
-        margin-bottom: 0;
-        position: relative;
-    }
-
-    .Ora::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
     
     .changes_area{
         border: 0;
@@ -246,7 +265,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     
     .money_back{
         width: 94px;
-        height: 33px;
+        padding: 7px 0;
         font-weight: 500;
         font-size: 13px;
         line-height: 19px;
@@ -259,7 +278,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     
     .enter{
         width: 200px;
-        height: 33px;
+        padding: 6px 0;
         border: 1px solid #BDBDBD;
         box-sizing: border-box;
         border-radius: 5px;
@@ -278,7 +297,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
 
     .enter_money{
         margin-top: 0;
-        height: 32px;
+        padding: 6.5px 0;
     }
     
     .sell{
@@ -316,7 +335,6 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     .obtain{
         background-color: #6327FE;
         width: 94px;
-        height: 106px;
         font-weight: 700;
         font-size: 13px;
         line-height: 19px;
@@ -326,6 +344,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         border-radius: 5px;
         vertical-align: top;
         margin: 1px 0 28px 12px;
+        padding: 43.5px 0;
     }
     
     /* money */
@@ -337,15 +356,14 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     .money_header{
         border-bottom: 20px solid #EAE8FE;
         width: 360px;
-        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 9px 0;
     }
     
     .have_money_area{
         width: 286px;
-        height: 20px;
         background-color: #EAE8FE;
         border-radius: 5px;
         border: 0;
@@ -353,7 +371,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 6px 10px;
+        padding: 7px 10px;
     }
     
     .have_money_label{
@@ -409,106 +427,6 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         border: solid 4px transparent;
     }
     
-    .gain{
-        height: 46px;
-        border-radius: 5px;
-        background-color: white;
-        font-weight: 500;
-        font-size: 9px;
-        line-height: 13px;
-        color: #333333;
-        display: flex;
-        align-items: center;
-        padding-left: 38px;
-        justify-content: space-between;
-    }
-    
-    .sum{
-        margin: 12px;
-        width: 238px;
-    }
-    
-    .gain::after{
-        width: 30px;
-        height: 30px;
-        border: 1px solid #BDBDBD;
-        box-sizing: border-box;
-        border-radius: 5px;
-        margin-right: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-    }
-    
-    .original{
-        background-image: url(./mediaquery/Original_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .original::after{
-        content: attr(data-count);
-    }
-    
-    .green{
-        background-image: url(./mediaquery/Green_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .green:after{
-        content: attr(data-count);
-    }
-    
-    .orange{
-        background-image: url(./mediaquery/Orange_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .orange::after{
-        content: attr(data-count);
-    }
-    
-    .violet{
-        background-image: url(./mediaquery/Violet_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .violet::after{
-        content: attr(data-count);
-    }
-
-    .cool{
-        background-image: url(./mediaquery/Cool_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-
-    .cool::after{
-        content: attr(data-count);
-    }
-
-    .yellow{
-        background-image: url(./mediaquery/Yellow_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-
-    .yellow::after{
-        content: attr(data-count);
-    }
-    
     .money::after{
         display: block;
         content: attr(data-total);
@@ -554,177 +472,6 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         margin: 25px 0 0 27px;
     }
     
-    .cola{
-        width: 94px;
-        height: 130px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-        margin: 6px;
-        font-weight: 500;
-        font-size: 9px;
-        line-height: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: center;
-        box-sizing: border-box;
-        cursor: pointer;
-    }
-    
-    .cola:hover{
-        outline: 3px solid #6327FE;
-    }
-    
-    .cola::after{
-        content: "1000원";
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 100%;
-        color: white;
-        background-color: #6327FE;
-        border-radius: 50px;
-        width: 60px;
-        height: 12px;
-        text-align: center;
-        padding: 5px;
-        display: block;
-        margin: 7px 0 9px 0;
-    }
-    
-    .Ori{
-        background: url(./mediaquery/Original_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 8px;
-        margin-left: 0;
-        position: relative;
-    }
-
-    .Ori::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-      
-    .Vio{
-        position: relative;
-        background: url(./mediaquery/Violet_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-    }
-    
-    .Vio::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Yel{
-        background: url(./mediaquery/Yellow_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-right: 0;
-        position: relative;
-    }
-
-    .Yel::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Coo{
-        background: url(./mediaquery/Cool_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-left: 0;
-        margin-bottom: 0;
-        position: relative;
-    }
-
-    .Coo::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Gre{
-        background: url(./mediaquery/Green_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-bottom: 0;
-        position: relative;
-    }
-
-    .Gre::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .Ora{
-        background: url(./mediaquery/Orange_Cola.png) no-repeat;
-        background-size: 35px 65px;
-        background-position: center 11px;
-        margin-right: 0;
-        margin-bottom: 0;
-        position: relative;
-    }
-
-    .Ora::before{
-        background: url(./mediaquery/Sold-out.png) no-repeat;
-        background-size: 57.51px 44.85px;
-        background-position: 17px 45px;
-        border-radius: 10px;
-        content: none;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
     .changes_area{
         border: 0;
         background-color: #EAE8FE;
@@ -761,7 +508,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     
     .money_back{
         width: 94px;
-        height: 33px;
+        padding: 7px 0;
         font-weight: 500;
         font-size: 13px;
         line-height: 19px;
@@ -774,7 +521,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     
     .enter{
         width: 200px;
-        height: 33px;
+        padding: 6px 0;
         border: 1px solid #BDBDBD;
         box-sizing: border-box;
         border-radius: 5px;
@@ -794,7 +541,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
 
     .enter_money{
         margin-top: 0;
-        height: 32px;
+        padding: 6.5px 0;
     }
     
     .sell{
@@ -833,7 +580,6 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     .obtain{
         background-color: #6327FE;
         width: 94px;
-        height: 106px;
         font-weight: 700;
         font-size: 13px;
         line-height: 19px;
@@ -843,6 +589,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         border-radius: 5px;
         vertical-align: top;
         margin: 1px 0 0 12px;
+        padding: 43.5px 0;
     }
     
     /* money */
@@ -854,15 +601,14 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
     
     .money_header{
         width: 360px;
-        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 9px 0;
     }
     
     .have_money_area{
         width: 286px;
-        height: 20px;
         background-color: #EAE8FE;
         border-radius: 5px;
         border: 0;
@@ -870,7 +616,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 6px 10px;
+        padding: 7px 10px;
     }
     
     .have_money_label{
@@ -925,107 +671,7 @@ body, html, div, a, p, span, ul, li, label, fieldset, input, h1, button{
         box-shadow: inset 0 0 12px 12px transparent;
         border: solid 4px transparent;
     }
-    
-    .gain{
-        height: 46px;
-        border-radius: 5px;
-        background-color: white;
-        font-weight: 500;
-        font-size: 9px;
-        line-height: 13px;
-        color: #333333;
-        display: flex;
-        align-items: center;
-        padding-left: 38px;
-        justify-content: space-between;
-    }
-    
-    .sum{
-        margin: 12px;
-        width: 238px;
-    }
-    
-    .gain::after{
-        width: 30px;
-        height: 30px;
-        border: 1px solid #BDBDBD;
-        box-sizing: border-box;
-        border-radius: 5px;
-        margin-right: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-    }
-    
-    .original{
-        background-image: url(./mediaquery/Original_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .original::after{
-        content: attr(data-count);
-    }
-    
-    .green{
-        background-image: url(./mediaquery/Green_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .green:after{
-        content: attr(data-count);
-    }
-    
-    .orange{
-        background-image: url(./mediaquery/Orange_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .orange::after{
-        content: attr(data-count);
-    }
-    
-    .violet{
-        background-image: url(./mediaquery/Violet_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-    
-    .violet::after{
-        content: attr(data-count);
-    }
-
-    .cool{
-        background-image: url(./mediaquery/Cool_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-
-    .cool::after{
-        content: attr(data-count);
-    }
-
-    .yellow{
-        background-image: url(./mediaquery/Yellow_Cola.png);
-        background-repeat: no-repeat;
-        background-size: 18px 33px;
-        background-position: 10px 6px;
-    }
-
-    .yellow::after{
-        content: attr(data-count);
-    }
-    
+        
     .money::after{
         display: block;
         content: attr(data-total);
