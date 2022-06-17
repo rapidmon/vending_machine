@@ -25,7 +25,7 @@ $input.addEventListener('keyup', function(e){
     let current_money= Number($current.value.replace("원","").replace(",",""))
     if(money > current_money){
         $input.value=""
-        alert("소지금이 부족해요 ㅠㅠ")
+        alert("소지금이 부족합니다.")
     }
     else{
         const krmoney = money.toLocaleString('ko-KR');
